@@ -1,0 +1,45 @@
+/* AdminHome.css */
+.admin-home-container {
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: relative; /* Add position: relative to the container */
+}
+
+.admin-content {
+  width: 100%;
+  flex: 1;
+  padding: 1rem;
+  background-color: lightgray;
+  position: relative; /* Add position: relative to the content */
+}
+
+.search-bar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+  /* Adjust styles for larger screens (e.g., tablets and desktops) */
+  .admin-home-container {
+    flex-direction: row;
+  }
+
+  .admin-content {
+    margin-left: 18rem;
+    width: 100%;
+  }
+}
+
+  
+  
+  

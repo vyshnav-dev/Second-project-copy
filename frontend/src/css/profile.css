@@ -1,0 +1,23 @@
+Profile.css
+
+
+.form-container {
+    width: 40rem;
+    height: 40rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+  
+
+  @media (max-width: 768px) {
+    .form-container {
+      width: 100%;
+      display: flex;
+    justify-content: center;
+    }
+  }
+  
+
+
+
