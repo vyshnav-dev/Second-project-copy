@@ -27,7 +27,7 @@ function Details() {
   // const navigate = useNavigate();
   const Uid = userInfo && userInfo._id
   const [errorMessage, setErrorMessage] = useState('');
-
+  const owId=turf.ownerId
   const resetErrorMessage = () => {
     setErrorMessage('');
   };
@@ -188,7 +188,7 @@ function Details() {
         </form>
         <div className="error-message">{errorMessage}</div>
       </div>
-      <Chatapp/>
+      <Chatapp owId={owId}/>
     </div>
   );
 

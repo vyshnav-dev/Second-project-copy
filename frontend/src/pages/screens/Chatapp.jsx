@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 import { io } from 'socket.io-client';
 import '../../css/chat.css';
 
-function Chatapp() {
+function Chatapp({owId}) {
   const [isChatVisible, setIsChatVisible] = useState(false);
   const [messages, setMessages] = useState([]);
   const [inputMessage, setInputMessage] = useState('');
@@ -17,7 +17,7 @@ function Chatapp() {
   const { ownerInfo } = useSelector((state) => state.owner);
   console.log('mumumuj',ownerInfo._id);
 
-  const tId = ownerInfo?._id;
+  const tId = owId;
   const userId = userInfo._id;
   const name = userInfo.name;
 
