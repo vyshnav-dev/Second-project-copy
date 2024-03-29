@@ -18,7 +18,14 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use(express.static("backend/public"));
+import { dirname } from "path";
+import { fileURLToPath } from "url";
+const __filename = fileURLToPath(import.meta.url);
+console.log("gooo", __filename);
+const __dirname = dirname(__filename);
+//middlewares
+console.log(__dirname, "dfjv");
+app.use("/Images", express.static(__dirname + "/public/Images"));
 
 // MongoDB Connection (adjust the URI)
 mongoose.connect(process.env.MONGO_URI || "mongodb://localhost:27017/yourdb", {

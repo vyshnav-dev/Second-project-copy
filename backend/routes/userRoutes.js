@@ -76,7 +76,7 @@ router.put('/changePassword/:id', changePassword)
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "backend/public/Images");
+    cb(null, "public/Images");
   },
   filename: (req, file, cb) => {
     cb(
