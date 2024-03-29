@@ -25,6 +25,7 @@ function Details() {
   const [selectedTime, setSelectedTime] = useState('');
   const { userInfo } = useSelector((state) => state.auth);
   // const navigate = useNavigate();
+  const Uid = userInfo && userInfo._id
   const [errorMessage, setErrorMessage] = useState('');
 
   const resetErrorMessage = () => {
@@ -54,7 +55,7 @@ function Details() {
       selectedDate: selectedDate.toISOString().split('T')[0],
       selectedGame,
       selectedTime,
-      userId: userInfo._id,
+      userId: Uid,
       username: userInfo.name,
       turfId: turf._id,
       ownerId: turf.ownerId,
