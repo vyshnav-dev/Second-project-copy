@@ -38,7 +38,7 @@ function Ownerchat() {
   console.log('rywuiw',tId);
 
   useEffect(() => {
-    const newSocket = io('http://localhost:5000'); // Adjust the URL to your backend server
+    const newSocket = io('https://second-project-copy.onrender.com'); // Adjust the URL to your backend server
     newSocket.on('connect', () => {
       console.log('Connected to Socket.io');
     });

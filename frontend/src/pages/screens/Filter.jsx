@@ -24,7 +24,7 @@ function Filter() {
         items.map((item) => (
           <Card key={item._id} style={{ width: '20rem', marginBottom: '20px', height: '22rem', backgroundColor: 'white' }}>
             <Link to={`/details/${item._id}`}>
-              <Card.Img style={{ height: '22rem', width: '20rem' }} variant="top" src={`http://localhost:5000/Images/${item.imagePath && item.imagePath[0]}`} />
+              <Card.Img style={{ height: '22rem', width: '20rem' }} variant="top" src={`https://second-project-copy.onrender.com/Images/${item.imagePath && item.imagePath[0]}`} />
               <Card.Body>
                 <Card.Title style={{ position: 'absolute', marginTop: '-5rem', color: 'white' }} className='tf1'>{item.turfname}</Card.Title>
                 <ListGroup.Item style={{ marginTop: '-3rem', color: 'white', textDecoration: 'none' }} className='tf2'>{item.location}</ListGroup.Item>

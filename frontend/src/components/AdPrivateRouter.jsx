@@ -16,7 +16,7 @@ const AdPrivateRoute = () => {
     const checkAdmin = async () => {
       try {
         const response = await fetch(
-          "http://localhost:5000/api/admin/checkAdmin",
+          "https://second-project-copy.onrender.com/api/admin/checkAdmin",
           {
             credentials: "include", // Include cookies in the request
           }

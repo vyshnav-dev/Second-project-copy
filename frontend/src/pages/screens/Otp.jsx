@@ -61,7 +61,7 @@ useEffect(() => {
 const handleResendClick = async () => {
   try {
     // Send a request to backend to resend OTP
-    const res = await axios.get('http://localhost:5000/api/users/resendOtp', {
+    const res = await axios.get('https://second-project-copy.onrender.com/api/users/resendOtp', {
       withCredentials: true,
       
     });

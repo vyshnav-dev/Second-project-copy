@@ -50,7 +50,7 @@ function LandingScreen() {
     {turf.map((turfItem, index) => (
         <Card className='newone1' key={index} style={{ width: '18rem', marginBottom: '20px', height: '20rem', backgroundColor: 'white', marginTop: '50px' }}>
           <Link style={{textDecoration:'none'}} to={'/details/' + turfItem._id}>
-            <Card.Img style={{ height: '20rem', width: '18rem',  }} variant="top" src={`http://localhost:5000/Images/${turfItem.imagePath[0]}`} />
+            <Card.Img style={{ height: '20rem', width: '18rem',  }} variant="top" src={`https://second-project-copy.onrender.com/Images/${turfItem.imagePath[0]}`} />
             <Card.Body>
               <Card.Title style={{position:'absolute', marginTop:'-5rem', color:'white'}} className='tf1'>{turfItem.turfname}</Card.Title>
               <h6 style={{marginTop:'-3rem',color:'white' , textDecoration:'none'}} className='tf2'>{turfItem.location}</h6>

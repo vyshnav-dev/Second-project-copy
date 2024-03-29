@@ -107,7 +107,7 @@ function Details() {
     {turf.imagePath && (
       <ImageGallery
         items={turf.imagePath.map((image, ) => ({
-          original: `http://localhost:5000/Images/${image}`,
+          original: `https://second-project-copy.onrender.com/Images/${image}`,
           // thumbnail: `http://localhost:5000/Images/${image}`, // You can use the same image for thumbnails if you want
           // description: `Product Image ${index + 1}`,
         }))}

@@ -45,7 +45,7 @@ const PrivateRoute = () => {
   useEffect(() => {
     const checkAuth = async () => {
         try {
-            const response = await fetch('http://localhost:5000/api/users/checkAuth', {
+            const response = await fetch('https://second-project-copy.onrender.com/api/users/checkAuth', {
                 credentials: 'include' // Include cookies in the request
             });
             console.log('joooo',response);

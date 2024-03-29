@@ -13,7 +13,7 @@ const port = process.env.PORT || 5000;
 const app = express();
 
 // Middleware
-app.use(cors({ origin: "http://localhost:5000", credentials: true }));
+app.use(cors({ origin: "https://second-project-copy.onrender.com", credentials: true }));
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -29,7 +29,7 @@ mongoose.connect(process.env.MONGO_URI || "mongodb://localhost:27017/yourdb", {
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5000", // Adjust the origin to match your frontend URL
+    origin: "https://second-project-copy.onrender.com", // Adjust the origin to match your frontend URL
     methods: ["GET", "POST"],
   },
 });

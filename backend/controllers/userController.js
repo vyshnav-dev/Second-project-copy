@@ -606,8 +606,8 @@ const payment = asyncHandler(async(req, res)=>{
                 quantity: 1,
             },
         ],
-            success_url: 'http://localhost:5000/details/success',
-            cancel_url: `http://localhost:5000/details/${turf}`,
+            success_url: 'https://second-project-copy.onrender.com/details/success',
+            cancel_url: `https://second-project-copy.onrender.com/details/${turf}`,
         })
 
         res.json({ id: session.id });
@@ -705,7 +705,7 @@ const forgotPassword = asyncHandler(async (req, res) => {
       to: user.email,
       subject: 'change password requst',
       html: `<p> the message from the WanderIn.if you want to change the password ?
-               </p> <a href="http://localhost:5000/login/${user._id}">Click here to reset your password</a>`
+               </p> <a href="https://second-project-copy.onrender.com/login/${user._id}">Click here to reset your password</a>`
     }
 
     transporter.sendMail(mailOptions, function (error, info) {

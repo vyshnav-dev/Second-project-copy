@@ -37,7 +37,7 @@ const OwnerPrivateRoute = () => {
     const checkOwner = async () => {
       try {
         const response = await fetch(
-          "http://localhost:5000/api/owner/checkOwner",
+          "https://second-project-copy.onrender.com/api/owner/checkOwner",
           {
             credentials: "include", // Include cookies in the request
           }

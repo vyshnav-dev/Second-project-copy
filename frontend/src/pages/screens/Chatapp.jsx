@@ -22,7 +22,7 @@ function Chatapp() {
   const name = userInfo.name;
 
   useEffect(() => {
-    const newSocket = io('http://localhost:5000');
+    const newSocket = io('https://second-project-copy.onrender.com');
     newSocket.on('connect', () => {
       console.log('Connected to Socket.io');
     });
