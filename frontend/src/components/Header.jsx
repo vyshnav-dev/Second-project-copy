@@ -10,6 +10,10 @@ import Default from "./Default";
 import "../css/header.css";
 
 const Header = () => {
+  const style={
+    small:'10px',
+    big:'18px'
+  }
   const { userInfo } = useSelector((state) => state.auth);
   console.log("hesder", userInfo);
 
@@ -81,7 +85,7 @@ const Header = () => {
                   </LinkContainer>
 
                   <NavDropdown
-                    style={{ marginLeft: "-34px" }}
+                    style={{fontWeight:'bold',marginTop:'8px', marginLeft: "-34px",fontSize:userInfo && userInfo.name.length>=4 ? style.small:style.big }}
                     title={userInfo.name}
                     id="username"
                   >
