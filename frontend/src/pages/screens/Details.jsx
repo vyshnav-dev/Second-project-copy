@@ -36,7 +36,7 @@ function Details() {
     const fetchUserTurf = async () => {
       try {
         const response = await axios.get(`/users/turf-details/${id}`);
-        setTurf(response.data.turf);
+        setTurf(response.data.turf[0]);
         dispatch(setturfCredentials({ ...response.data.turf }));
       } catch (error) {
         console.error('Error fetching turf:', error);
