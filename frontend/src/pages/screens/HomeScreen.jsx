@@ -57,7 +57,7 @@ const HomeScreen = () => {
         <div style={{ display: 'flex', justifyContent: 'space-evenly', marginTop: '20px', flexWrap: 'wrap' }}>
           {turf.map((turfItem, index) => (
             <Card className='homecard' key={index} style={{ width: '20rem', marginBottom: '20px', height: '22rem', backgroundColor: 'white' }}>
-              <Link to={'/details/' + turfItem._id}>
+              <Link to={'/details/' + turfItem.ownerId}>
                 <Card.Img style={{ height: '22rem', width: '20rem' }} variant="top" src={`https://second-project-copy.onrender.com/Images/${turfItem.imagePath[0]}`} />
                 <Card.Body>
                   <Card.Title style={{ position: 'absolute', marginTop: '-5rem', color: 'white' }} className='tf1'>{turfItem.turfname}</Card.Title>

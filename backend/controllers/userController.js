@@ -363,7 +363,7 @@ const userTurfDetails = asyncHandler(async (req, res) => {
   const turfId = req.params.id;
 
   try {
-    const turf = await Turf.findById(turfId);
+    const turf = await Turf.find({ownerId:turfId});
 
     if (!turf) {
       return res.status(404).json({ error: "Turf not found" });

@@ -4,8 +4,10 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import { io } from 'socket.io-client';
 import '../../css/chat.css';
+import { useParams } from "react-router-dom";
 
-function Chatapp({owId}) {
+function Chatapp() {
+  const { id } = useParams();
   const [isChatVisible, setIsChatVisible] = useState(false);
   const [messages, setMessages] = useState([]);
   const [inputMessage, setInputMessage] = useState('');
@@ -14,10 +16,9 @@ function Chatapp({owId}) {
   // const { turfInfo } = useSelector((state) => state.turf);
   const { userInfo } = useSelector((state) => state.auth);
   
-  const { ownerInfo } = useSelector((state) => state.owner);
-  console.log('mumumuj',ownerInfo._id);
+  
 
-  const tId = owId;
+  const tId = id ? id : "65277ac36ed46a3ed06601bc";
   const userId = userInfo._id;
   const name = userInfo.name;
 
